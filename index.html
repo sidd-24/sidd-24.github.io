@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siddhant Chindhe · Data & AI</title>
+  <meta name="description" content="Siddhant Chindhe builds data and AI systems and measures whether they work. M.Sc. International Information Systems at FAU, Nürnberg. Open to working student, internship and master's thesis positions.">
+  <meta property="og:title" content="Siddhant Chindhe · Data & AI">
+  <meta property="og:description" content="Data and AI systems, measured against baselines. 27 public projects across AI engineering, data engineering, ML, BI and product management.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // set the theme before the first paint
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to projects</a>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="mark" href="#" aria-label="Siddhant Chindhe, home">SC<span>.</span></a>
+      <nav aria-label="Sections">
+        <a href="#live">Live</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme" id="theme" type="button" aria-label="Switch colour theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 7a5 5 0 0 0 0 10z" class="half"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-main">
+        <p class="eyebrow">Siddhant Chindhe <span class="sep">/</span> Data &amp; AI <span class="sep">/</span> Nürnberg</p>
+        <h1 id="pitch"></h1>
+        <p class="lede" id="sub"></p>
+
+        <div class="tracks">
+          <p class="tracks-label" id="tracks-label">I'm looking for someone in</p>
+          <div class="track-list" id="tracks" role="group" aria-labelledby="tracks-label"></div>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" id="mail" href="#">Email me</a>
+          <a class="btn" id="li" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" id="gh" href="#" target="_blank" rel="noopener">GitHub</a>
+          <button class="btn ghost" id="copy" type="button" hidden>Copy link to this view</button>
+        </div>
+      </div>
+
+      <aside class="spec" aria-label="At a glance">
+        <dl>
+          <div><dt>Status</dt><dd><span class="dot"></span>Open to working student, internship and master's thesis roles</dd></div>
+          <div><dt>Where</dt><dd>Nürnberg · Germany, EU or remote</dd></div>
+          <div><dt>Studying</dt><dd>M.Sc. International Information Systems, FAU</dd></div>
+          <div><dt>Worked</dt><dd>1.5 years building GenAI chatbots at Cognizant</dd></div>
+          <div><dt>Speaks</dt><dd>English C1 · German B1 · Hindi · Marathi</dd></div>
+        </dl>
+        <p class="ruler" aria-hidden="true"></p>
+        <p class="spec-foot"><span id="count-projects">27</span> public projects · <span id="count-live">3</span> pipelines running</p>
+      </aside>
+    </section>
+
+    <section id="live" class="wrap section">
+      <div class="head">
+        <h2>Running right now</h2>
+        <p>These numbers aren't typed in. Three of my pipelines refresh them on a schedule with GitHub Actions, and this page reads their latest results when it loads.</p>
+      </div>
+      <div class="live-grid" id="live-grid"></div>
+    </section>
+
+    <section id="work" class="wrap section">
+      <div class="head">
+        <h2>Work</h2>
+        <p>Each project is compared with something: a simple baseline, the current process or a statistical target. Where it fell short, the card says so.</p>
+      </div>
+      <div class="filter-bar" id="filter-bar" aria-live="polite"></div>
+      <div class="grid" id="projects"></div>
+    </section>
+
+    <section id="skills" class="wrap section">
+      <div class="head">
+        <h2>Skills, with receipts</h2>
+        <p>The number next to a skill is how many public projects use it. Click one to see them.</p>
+      </div>
+      <div class="skills" id="skill-groups"></div>
+
+      <div class="market" id="market">
+        <div class="market-head">
+          <h3>What employers ask for this week, and where I've used it</h3>
+          <p id="market-sub"></p>
+        </div>
+        <ol class="market-list" id="market-list"></ol>
+        <p class="market-foot">Language requirements are left out. A skill counts once a posting mentions it, whether it's required or "nice to have".</p>
+      </div>
+    </section>
+
+    <section class="wrap section principles" aria-labelledby="how">
+      <div class="head"><h2 id="how">How I work</h2></div>
+      <ol class="pr">
+        <li><span class="num">01</span><h3>Baseline first</h3><p>A model has to beat the obvious answer before it gets complicated. My F1 predictor only ties "finish where you started", and its README says so.</p></li>
+        <li><span class="num">02</span><h3>Tests, not trust</h3><p>Data tests in dbt, a no-look-ahead check for every risk model, a regression test for each bug I've fixed. Most repos run their tests in CI.</p></li>
+        <li><span class="num">03</span><h3>Say what didn't work</h3><p>My READMEs have a limitations section: survivorship bias, assumed costs, small test sets. A reviewer should hear it from me first.</p></li>
+      </ol>
+    </section>
+
+    <section id="about" class="wrap section">
+      <div class="head"><h2>Experience &amp; education</h2></div>
+      <div class="about">
+        <ol class="timeline" id="timeline"></ol>
+        <div class="extras">
+          <h3>Also</h3>
+          <ul id="extras"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="foot">
+    <div class="wrap foot-inner">
+      <p class="foot-big">Hiring a working student, an intern or a thesis student?<br><a id="mail-2" href="#">Write to me.</a></p>
+      <p class="foot-links">
+        <a id="li-2" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a id="gh-2" href="#" target="_blank" rel="noopener">GitHub</a>
+        <span class="muted">Hand-built with plain HTML, CSS and JavaScript. No framework, no tracking.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
