@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Siddhant Chindhe · Data & AI</title>
-  <meta name="description" content="Siddhant Chindhe builds data and AI systems and measures whether they work. M.Sc. International Information Systems at FAU, Nürnberg. Open to working student, internship and master's thesis positions.">
+  <meta name="description" content="Siddhant Chindhe: data and AI projects, skills and experience. M.Sc. International Information Systems at FAU, Nürnberg. Open to working student, internship and master's thesis positions.">
   <meta property="og:title" content="Siddhant Chindhe · Data & AI">
-  <meta property="og:description" content="Data and AI systems, measured against baselines. 27 public projects across AI engineering, data engineering, ML, BI and product management.">
+  <meta property="og:description" content="Public projects in AI engineering, data engineering, machine learning, BI and product management.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>
     // set the theme before the first paint
@@ -21,118 +21,125 @@
 <body>
   <a class="skip" href="#work">Skip to projects</a>
 
-  <header class="top">
-    <div class="wrap top-inner">
-      <a class="mark" href="#" aria-label="Siddhant Chindhe, home">SC<span>.</span></a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Siddhant Chindhe</a>
       <nav aria-label="Sections">
-        <a href="#live">Live</a>
-        <a href="#work">Work</a>
+        <a href="#live">Live data</a>
+        <a href="#work">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="theme" id="theme" type="button" aria-label="Switch colour theme">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 7a5 5 0 0 0 0 10z" class="half"/></svg>
+      <button class="theme" id="theme" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
     </div>
   </header>
 
   <main>
-    <section class="hero wrap">
-      <div class="hero-main">
-        <p class="eyebrow">Siddhant Chindhe <span class="sep">/</span> Data &amp; AI <span class="sep">/</span> Nürnberg</p>
-        <h1 id="pitch"></h1>
-        <p class="lede" id="sub"></p>
-
-        <div class="tracks">
-          <p class="tracks-label" id="tracks-label">I'm looking for someone in</p>
-          <div class="track-list" id="tracks" role="group" aria-labelledby="tracks-label"></div>
-        </div>
-
+    <section class="hero container" id="top">
+      <div>
+        <p class="kicker">Data &amp; AI · Nürnberg, Germany</p>
+        <h1>Siddhant Chindhe</h1>
+        <p class="pitch" id="pitch"></p>
+        <p class="sub" id="sub"></p>
         <div class="cta">
           <a class="btn primary" id="mail" href="#">Email me</a>
           <a class="btn" id="li" href="#" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" id="gh" href="#" target="_blank" rel="noopener">GitHub</a>
-          <button class="btn ghost" id="copy" type="button" hidden>Copy link to this view</button>
         </div>
       </div>
 
-      <aside class="spec" aria-label="At a glance">
+      <aside class="facts card" aria-labelledby="facts-title">
+        <h2 id="facts-title">At a glance</h2>
         <dl>
-          <div><dt>Status</dt><dd><span class="dot"></span>Open to working student, internship and master's thesis roles</dd></div>
-          <div><dt>Where</dt><dd>Nürnberg · Germany, EU or remote</dd></div>
+          <div><dt>Looking for</dt><dd>Working student, internship or master's thesis</dd></div>
+          <div><dt>Location</dt><dd>Nürnberg · open to Germany, EU or remote</dd></div>
           <div><dt>Studying</dt><dd>M.Sc. International Information Systems, FAU</dd></div>
-          <div><dt>Worked</dt><dd>1.5 years building GenAI chatbots at Cognizant</dd></div>
-          <div><dt>Speaks</dt><dd>English C1 · German B1 · Hindi · Marathi</dd></div>
+          <div><dt>Experience</dt><dd>1.5 years GenAI development at Cognizant</dd></div>
+          <div><dt>Certified</dt><dd>Google Generative AI Leader · Azure AI Fundamentals</dd></div>
+          <div><dt>Languages</dt><dd>English C1 · German B1 · Hindi · Marathi</dd></div>
+          <div><dt>On GitHub</dt><dd><span id="count-projects">27</span> public projects, <span id="count-live">3</span> updating automatically</dd></div>
         </dl>
-        <p class="ruler" aria-hidden="true"></p>
-        <p class="spec-foot"><span id="count-projects">27</span> public projects · <span id="count-live">3</span> pipelines running</p>
       </aside>
     </section>
 
-    <section id="live" class="wrap section">
-      <div class="head">
-        <h2>Running right now</h2>
-        <p>These numbers aren't typed in. Three of my pipelines refresh them on a schedule with GitHub Actions, and this page reads their latest results when it loads.</p>
-      </div>
-      <div class="live-grid" id="live-grid"></div>
-    </section>
-
-    <section id="work" class="wrap section">
-      <div class="head">
-        <h2>Work</h2>
-        <p>Each project is compared with something: a simple baseline, the current process or a statistical target. Where it fell short, the card says so.</p>
-      </div>
-      <div class="filter-bar" id="filter-bar" aria-live="polite"></div>
-      <div class="grid" id="projects"></div>
-    </section>
-
-    <section id="skills" class="wrap section">
-      <div class="head">
-        <h2>Skills, with receipts</h2>
-        <p>The number next to a skill is how many public projects use it. Click one to see them.</p>
-      </div>
-      <div class="skills" id="skill-groups"></div>
-
-      <div class="market" id="market">
-        <div class="market-head">
-          <h3>What employers ask for this week, and where I've used it</h3>
-          <p id="market-sub"></p>
+    <section id="live" class="band">
+      <div class="container">
+        <div class="section-head">
+          <h2>Live project data</h2>
+          <p>Three of my projects update themselves on a schedule with GitHub Actions. These numbers are loaded from their latest results each time the page opens.</p>
         </div>
-        <ol class="market-list" id="market-list"></ol>
-        <p class="market-foot">Language requirements are left out. A skill counts once a posting mentions it, whether it's required or "nice to have".</p>
+        <div class="live-grid" id="live-grid"></div>
       </div>
     </section>
 
-    <section class="wrap section principles" aria-labelledby="how">
-      <div class="head"><h2 id="how">How I work</h2></div>
-      <ol class="pr">
-        <li><span class="num">01</span><h3>Baseline first</h3><p>A model has to beat the obvious answer before it gets complicated. My F1 predictor only ties "finish where you started", and its README says so.</p></li>
-        <li><span class="num">02</span><h3>Tests, not trust</h3><p>Data tests in dbt, a no-look-ahead check for every risk model, a regression test for each bug I've fixed. Most repos run their tests in CI.</p></li>
-        <li><span class="num">03</span><h3>Say what didn't work</h3><p>My READMEs have a limitations section: survivorship bias, assumed costs, small test sets. A reviewer should hear it from me first.</p></li>
-      </ol>
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>Each project is compared with a baseline, the current process or a target, and lists its main limitation.</p>
+        </div>
+        <div class="roles" id="roles">
+          <p class="roles-label" id="roles-label">Choose a role to see the matching projects and skills:</p>
+          <div class="roles-row">
+            <div class="role-list" id="tracks" role="group" aria-labelledby="roles-label"></div>
+            <button class="link-btn" id="copy" type="button" hidden>Copy link to this view</button>
+          </div>
+        </div>
+        <div class="filter-bar" id="filter-bar" aria-live="polite"></div>
+        <div class="grid" id="projects"></div>
+      </div>
     </section>
 
-    <section id="about" class="wrap section">
-      <div class="head"><h2>Experience &amp; education</h2></div>
-      <div class="about">
-        <ol class="timeline" id="timeline"></ol>
-        <div class="extras">
-          <h3>Also</h3>
-          <ul id="extras"></ul>
+    <section id="skills" class="band">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p>The number shows how many of my projects use a skill. Click a skill to see those projects.</p>
+        </div>
+        <div class="skills" id="skill-groups"></div>
+
+        <div class="market card" id="market">
+          <h3>Skills in demand in Germany this week</h3>
+          <p class="market-sub" id="market-sub"></p>
+          <ol class="market-list" id="market-list"></ol>
+          <p class="market-foot">Language requirements are not included. A skill counts when a posting mentions it, whether required or "nice to have".</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head"><h2>Experience &amp; education</h2></div>
+        <div class="about">
+          <ol class="timeline" id="timeline"></ol>
+          <div class="side">
+            <div class="certs card">
+              <h3>Certifications</h3>
+              <ul id="certs"></ul>
+            </div>
+            <div class="extras card">
+              <h3>Other</h3>
+              <ul id="extras"></ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer id="contact" class="foot">
-    <div class="wrap foot-inner">
-      <p class="foot-big">Hiring a working student, an intern or a thesis student?<br><a id="mail-2" href="#">Write to me.</a></p>
-      <p class="foot-links">
-        <a id="li-2" href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a id="gh-2" href="#" target="_blank" rel="noopener">GitHub</a>
-        <span class="muted">Hand-built with plain HTML, CSS and JavaScript. No framework, no tracking.</span>
-      </p>
+  <footer id="contact" class="footer">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <p>I'm looking for a working student position, an internship or a master's thesis in data, AI or product roles. The fastest way to reach me is by email.</p>
+      <div class="cta">
+        <a class="btn primary" id="mail-2" href="#">Email me</a>
+        <a class="btn" id="li-2" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" id="gh-2" href="#" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="copyright">© <span id="year">2026</span> Siddhant Chindhe</p>
     </div>
   </footer>
 

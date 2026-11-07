@@ -12,27 +12,27 @@ window.SITE = {
 
 // Role tracks: each one changes the headline, the project order and the skill order.
 window.TRACKS = [
-  { id: "all", label: "Everything",
-    pitch: "I build data and AI systems for real business problems, and I <em>measure</em> whether they work.",
-    sub: "Baselines, held-out tests, and an honest account of what didn't. {n} public projects across AI engineering, data engineering, machine learning, BI and product management." },
+  { id: "all", label: "All roles",
+    pitch: "I build data and AI systems for business problems and test them against simple baselines.",
+    sub: "Master's student in International Information Systems at FAU Erlangen-Nürnberg, with 1.5 years of GenAI work at Cognizant. Below are {n} public projects across AI engineering, data engineering, machine learning, BI and product management." },
   { id: "ai", label: "AI Engineering", market: "ML & AI",
-    pitch: "LLM applications built to be <em>audited</em>, not just demoed.",
-    sub: "Answers that cite their sources, refusals when the sources don't cover a question, human approval before anything is sent, and tests in CI. 1.5 years building enterprise GenAI chatbots at Cognizant." },
+    pitch: "I build LLM applications that cite their sources, refuse when they don't know, and are tested in CI.",
+    sub: "RAG, agents with LangGraph and MCP, and human approval before anything is sent. 1.5 years building enterprise GenAI chatbots with LangChain and Azure OpenAI at Cognizant." },
   { id: "de", label: "Data Engineering", market: "data & analytics",
-    pitch: "Pipelines that run on their own and <em>check</em> their own data.",
-    sub: "DuckDB and dbt, Airflow, scheduled GitHub Actions, and data tests on every run. Three of my pipelines are refreshing the numbers on this page." },
+    pitch: "I build data pipelines that run on a schedule and test their own data.",
+    sub: "DuckDB and dbt, Airflow, scheduled GitHub Actions and data tests on every run. Three of my pipelines update the numbers on this page." },
   { id: "ml", label: "ML & Data Science", market: "ML & AI",
-    pitch: "Core machine learning, done <em>properly</em>.",
-    sub: "A simple baseline first, honest validation, tuning, calibration and error analysis, and a model card that says where the model fails." },
+    pitch: "I build machine learning models that start from a simple baseline and are validated honestly.",
+    sub: "Tuning, calibration, error analysis, experiment tracking with MLflow, and a model card that says where the model fails." },
   { id: "bi", label: "Data & BI", market: "data & analytics",
-    pitch: "Reports people can <em>trust</em>.",
-    sub: "Reconciled to the source, clearly defined measures, and a written comment on what changed and why. Power BI, DAX, Excel and SQL." },
+    pitch: "I build reports that are reconciled to the source and easy to act on.",
+    sub: "Power BI and DAX, Excel automation, SQL, and a written comment on what changed and why." },
   { id: "pm", label: "Product & Project", market: "product & project management",
-    pitch: "Product and project work with <em>numbers</em> behind it.",
-    sub: "PRDs, business cases, status reports and prioritisation that a steering committee can act on, written by someone who has built the systems behind them." },
+    pitch: "I write PRDs, business cases and status reports, with the numbers behind them.",
+    sub: "Prioritisation, steering committee reporting and EU AI Act checks, from someone who has also built the systems behind them." },
   { id: "qa", label: "QA & Testing", market: "software engineering",
-    pitch: "Tests that catch the bug <em>before</em> the user does.",
-    sub: "End-to-end browser tests, regression suites in CI, and test scenarios generated from feature descriptions." },
+    pitch: "I write automated tests for web apps and APIs.",
+    sub: "End-to-end browser tests with Playwright, regression suites in CI, and test scenarios generated from feature descriptions." },
 ];
 
 window.SKILL_GROUPS = [
@@ -214,10 +214,12 @@ window.MARKET_EVIDENCE = {
   "PyTorch": { skills: ["PyTorch"] },
   "scikit-learn": { skills: ["scikit-learn"] },
   "NLP": { skills: ["NLP"] },
-  "Azure": { note: "Azure OpenAI at Cognizant" },
+  "Azure": { note: "Azure OpenAI at Cognizant; Azure Fundamentals and Azure AI Fundamentals certified" },
   "Linux": { note: "shell scripting at Cognizant" },
   "Docker": { skills: ["Docker"] },
   "Git": { note: "every project" },
+  "AWS": { partial: "AWS Cloud Practitioner certificate, no project yet" },
+  "GCP": { partial: "Google Generative AI Leader certificate, no project yet" },
   "Jira": { skills: ["Jira"] },
   "REST APIs": { skills: ["REST APIs", "FastAPI"] },
   "ETL": { skills: ["ETL / ELT"] },
@@ -236,6 +238,14 @@ window.EXPERIENCE = [
     detail: "Automated data ingestion and validation pipelines with Python, MySQL and shell scripting." },
   { when: "Aug 2018 – May 2022", where: "Savitribai Phule Pune University", what: "B.E. Computer Engineering, honours in Data Science",
     detail: "Thesis: social media sentiment analysis with NLP and machine learning." },
+];
+
+// expires: "YYYY-MM"; the page marks a certificate as expired after that month
+window.CERTS = [
+  { name: "Generative AI Leader", issuer: "Google Cloud", issued: "2026-07", expires: "2029-07" },
+  { name: "Azure AI Fundamentals (AI-900)", issuer: "Microsoft", issued: "2024-05", id: "F7D234A5DC0E4EDA" },
+  { name: "Azure Fundamentals (AZ-900)", issuer: "Microsoft", issued: "2024-04", id: "4B12C27DAF4C73C6" },
+  { name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services" },
 ];
 
 window.EXTRAS = [
