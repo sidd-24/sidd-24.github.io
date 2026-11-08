@@ -6,8 +6,9 @@
   <title>Siddhant Chindhe · Data & AI</title>
   <meta name="description" content="Siddhant Chindhe: data and AI projects, skills and experience. M.Sc. International Information Systems at FAU, Nürnberg. Open to working student, internship and master's thesis positions.">
   <meta property="og:title" content="Siddhant Chindhe · Data & AI">
-  <meta property="og:description" content="Public projects in AI engineering, data engineering, machine learning, BI and product management.">
+  <meta property="og:description" content="Projects in AI engineering, data engineering, machine learning, BI and product management.">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b1f3a">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,105 +25,108 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#top">Siddhant Chindhe</a>
-      <nav aria-label="Sections">
-        <a href="#live">Live data</a>
-        <a href="#work">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme" id="theme" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+          <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>Menu</span>
+        </button>
+      </div>
     </div>
+    <nav class="menu" id="menu" aria-label="Sections" hidden>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#live">Live project data</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">Experience &amp; education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="hero container" id="top">
-      <div>
-        <p class="kicker">Data &amp; AI · Nürnberg, Germany</p>
-        <h1>Siddhant Chindhe</h1>
-        <p class="pitch" id="pitch"></p>
-        <p class="sub" id="sub"></p>
-        <div class="cta">
-          <a class="btn primary" id="mail" href="#">Email me</a>
-          <a class="btn" id="li" href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" id="gh" href="#" target="_blank" rel="noopener">GitHub</a>
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div>
+          <p class="kicker">Data &amp; AI · Nürnberg, Germany</p>
+          <h1>Siddhant Chindhe</h1>
+          <p class="pitch">I build data and AI systems for business problems and test them against simple baselines.</p>
+          <p class="sub">Master's student in International Information Systems at FAU Erlangen-Nürnberg, with 1.5 years of GenAI work at Cognizant.</p>
+          <div class="cta">
+            <a class="btn primary" id="mail" href="#">Email me</a>
+            <a class="btn outline" id="li" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn outline" id="gh" href="#" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
-      </div>
 
-      <aside class="facts card" aria-labelledby="facts-title">
-        <h2 id="facts-title">At a glance</h2>
-        <dl>
-          <div><dt>Looking for</dt><dd>Working student, internship or master's thesis</dd></div>
-          <div><dt>Location</dt><dd>Nürnberg · open to Germany, EU or remote</dd></div>
-          <div><dt>Studying</dt><dd>M.Sc. International Information Systems, FAU</dd></div>
-          <div><dt>Experience</dt><dd>1.5 years GenAI development at Cognizant</dd></div>
-          <div><dt>Certified</dt><dd>Google Generative AI Leader · Azure AI Fundamentals</dd></div>
-          <div><dt>Languages</dt><dd>English C1 · German B1 · Hindi · Marathi</dd></div>
-          <div><dt>On GitHub</dt><dd><span id="count-projects">27</span> public projects, <span id="count-live">3</span> updating automatically</dd></div>
-        </dl>
-      </aside>
+        <aside class="facts" aria-labelledby="facts-title">
+          <h2 id="facts-title">At a glance</h2>
+          <dl>
+            <div><dt>Looking for</dt><dd>Working student, internship or master's thesis</dd></div>
+            <div><dt>Location</dt><dd>Nürnberg · open to Germany, EU or remote</dd></div>
+            <div><dt>Studying</dt><dd>M.Sc. International Information Systems, FAU</dd></div>
+            <div><dt>Experience</dt><dd>1.5 years GenAI development at Cognizant</dd></div>
+            <div><dt>Languages</dt><dd>English C1 · German B1 · Hindi · Marathi</dd></div>
+          </dl>
+        </aside>
+      </div>
     </section>
 
-    <section id="live" class="band">
+    <section id="live" class="section">
       <div class="container">
         <div class="section-head">
           <h2>Live project data</h2>
-          <p>Three of my projects update themselves on a schedule with GitHub Actions. These numbers are loaded from their latest results each time the page opens.</p>
+          <p>Three of my projects update themselves on a schedule. These numbers are loaded from their latest results.</p>
         </div>
         <div class="live-grid" id="live-grid"></div>
       </div>
     </section>
 
-    <section id="work" class="section">
+    <section id="work" class="section alt">
       <div class="container">
         <div class="section-head">
           <h2>Projects</h2>
-          <p>Each project is compared with a baseline, the current process or a target, and lists its main limitation.</p>
+          <p>Choose a role to see the projects for it.</p>
         </div>
-        <div class="roles" id="roles">
-          <p class="roles-label" id="roles-label">Choose a role to see the matching projects and skills:</p>
-          <div class="roles-row">
-            <div class="role-list" id="tracks" role="group" aria-labelledby="roles-label"></div>
-            <button class="link-btn" id="copy" type="button" hidden>Copy link to this view</button>
-          </div>
-        </div>
-        <div class="filter-bar" id="filter-bar" aria-live="polite"></div>
+        <div class="role-list" id="tracks" role="group" aria-label="Role"></div>
+        <p class="role-intro" id="role-intro" aria-live="polite"></p>
         <div class="grid" id="projects"></div>
+        <p class="more">All projects are on <a id="gh-3" href="#" target="_blank" rel="noopener">GitHub</a>.</p>
       </div>
     </section>
 
-    <section id="skills" class="band">
+    <section id="skills" class="section">
       <div class="container">
         <div class="section-head">
           <h2>Skills</h2>
-          <p>The number shows how many of my projects use a skill. Click a skill to see those projects.</p>
         </div>
         <div class="skills" id="skill-groups"></div>
 
-        <div class="market card" id="market">
-          <h3>Skills in demand in Germany this week</h3>
+        <div class="market card" id="market" hidden>
+          <h3 id="market-title">Skills in demand in Germany this week</h3>
           <p class="market-sub" id="market-sub"></p>
           <ol class="market-list" id="market-list"></ol>
-          <p class="market-foot">Language requirements are not included. A skill counts when a posting mentions it, whether required or "nice to have".</p>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section alt">
       <div class="container">
         <div class="section-head"><h2>Experience &amp; education</h2></div>
         <div class="about">
           <ol class="timeline" id="timeline"></ol>
           <div class="side">
-            <div class="certs card">
+            <div class="card side-card" id="certifications">
               <h3>Certifications</h3>
-              <ul id="certs"></ul>
+              <ul class="certs" id="certs"></ul>
             </div>
-            <div class="extras card">
+            <div class="card side-card">
               <h3>Other</h3>
-              <ul id="extras"></ul>
+              <ul class="extras" id="extras"></ul>
             </div>
           </div>
         </div>
@@ -133,11 +137,11 @@
   <footer id="contact" class="footer">
     <div class="container">
       <h2>Get in touch</h2>
-      <p>I'm looking for a working student position, an internship or a master's thesis in data, AI or product roles. The fastest way to reach me is by email.</p>
+      <p>I'm looking for a working student position, an internship or a master's thesis in data, AI or product roles.</p>
       <div class="cta">
         <a class="btn primary" id="mail-2" href="#">Email me</a>
-        <a class="btn" id="li-2" href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" id="gh-2" href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn outline" id="li-2" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn outline" id="gh-2" href="#" target="_blank" rel="noopener">GitHub</a>
       </div>
       <p class="copyright">© <span id="year">2026</span> Siddhant Chindhe</p>
     </div>
